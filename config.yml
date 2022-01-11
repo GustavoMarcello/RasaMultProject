@@ -1,0 +1,48 @@
+# https://rasa.com/docs/rasa/nlu/components/
+language: pt
+
+# # See https://rasa.com/docs/rasa/tuning-your-model for more information.
+pipeline:
+  - name: "SpacyNLP"
+    model: "pt_core_news_lg"
+    case_sensitive: False
+  - name: "SpacyTokenizer"
+    "intent_tokenization_flag": True
+  - name: "SpacyFeaturizer"
+    "pooling": "mean"
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+  - name: SpacyEntityExtractor
+  - name: EntitySynonymMapper
+  - name: DIETClassifier
+    epochs: 100
+    model_confidence: softmax
+    constrain_similarities: true
+    ranking_length: 5
+    use_masked_language_model: True
+  - name: FallbackClassifier
+    threshold: 0.6
+    ambiguity_threshold: 0.1
+
+# # See https://rasa.com/docs/rasa/policies for more information.
+policies:
+  - name: MemoizationPolicy
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100
+    constrain_similarities: true
+  - name: RulePolicy
+    check_for_contradictions: true
+    core_fallback_threshold: 0.05
+    enable_fallback_prediction: true
+  
+# # See https://rasa.com/docs/rasa/training-data-importers/ for more information.    
+importers:
+- name: MultiProjectImporter
+imports:
+- projects/Nome_Chatbot_1
+- projects/Nome_Chatbot_2

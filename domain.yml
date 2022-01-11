@@ -1,0 +1,41 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- bot_challenge
+
+responses:
+  utter_greet:
+  - text: Olá tudo bem, Qual chatbot você deseja testar?
+    buttons:
+    - title: Chatbot 1
+      payload: /iniciar_bot1
+    - title: Chatbot 2
+      payload: /iniciar_bot2
+
+  utter_return:
+  - text: Teste novamente se quiser 😄
+    buttons:
+    - title: Chatbot 1
+      payload: /iniciar_bot1
+    - title: Chatbot 2
+      payload: /iniciar_bot2
+
+  utter_goodbye:
+  - text: Até mais
+
+  utter_bot_challenge:
+  - text: Sou um bot Rasa!
+  
+  utter_fallback:
+  - text: Desculpe não entendi, Qual chatbot você deseja testar?
+    buttons:
+    - title: Chatbot 1
+      payload: /iniciar_bot1
+    - title: Chatbot 2
+      payload: /iniciar_bot2

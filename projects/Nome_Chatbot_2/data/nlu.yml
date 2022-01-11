@@ -1,0 +1,10 @@
+version: "2.0"
+
+nlu:
+- intent: iniciar_bot2
+  examples: |
+    - iniciar bot2
+    - bot 2
+    - 2
+    - começar bot 2
+
