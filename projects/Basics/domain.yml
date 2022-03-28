@@ -1,0 +1,15 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- bot_challenge
+- xingamento
+
+responses:
+  utter_bot_challenge:
+  - text: Sou um bot Rasa!
+
+  utter_xingamento:
+  - text: |-
+      Essas palavras estão sendo desrespeitosas comigo. 

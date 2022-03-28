@@ -21,6 +21,8 @@ importers:
 imports:
 - projects/Nome_Chatbot_1
 - projects/Nome_Chatbot_2
+- projects/Affirm_Deny
+- projects/Basics
 ```
 Crie um diretório chamado projects na raiz do seu chatbot Rasa, contendo diretórios próprios para cada chatbot que você deseja importar.
 
@@ -36,6 +38,16 @@ Considere a seguinte estrutura de diretórios:
     ├── rules.yml
     └── stories.yml
 └── projects
+    ├── Affirm_Deny
+    │   ├── data
+    │   │   ├── nlu.yml
+    │   │   └── stories.yml
+    │   └── domain.yml
+    ├── Basics
+    │   ├── data
+    │   │   ├── nlu.yml
+    │   │   └── stories.yml
+    │   └── domain.yml
     ├── Nome_Chatbot_1
     │   ├── data
     │   │   ├── nlu.yml

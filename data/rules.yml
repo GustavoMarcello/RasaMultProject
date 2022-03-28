@@ -1,33 +1,6 @@
 version: "2.0"
 
 rules:
-- rule: Saudacao
-  steps:
-  - intent: greet
-  - action: utter_greet
-
-- rule: tchau
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
-
-- rule: verificar se é bot
-  steps:
-  - intent: bot_challenge
-  - action: utter_bot_challenge
-
-- rule: bot 1
-  steps:
-  - intent: iniciar_bot1
-  - action: utter_iniciar_bot1
-  - action: utter_return
-
-- rule: bot 2
-  steps:
-  - intent: iniciar_bot2
-  - action: utter_iniciar_bot2
-  - action: utter_return
-
 - rule: fallback
   steps:
   - intent: nlu_fallback

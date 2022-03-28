@@ -1,28 +1,18 @@
 version: "2.0"
 nlu:
-- intent: greet
-  examples: |
-    - oi
-    - eae
-    - bom dia
-    - salve
-    - olá
-    
-- intent: goodbye
-  examples: |
-    - tchau
-    - xau
-    - até mais
-    - adeus
-    - fui
-    - obrigado
+  - intent: greet
+    examples: |
+      - oi
+      - eae
+      - bom dia
+      - salve
+      - olá
 
-- intent: bot_challenge
-  examples: |
-    - você é um bot?
-    - você é humano?
-    - quem é você?
-    - vc é bot?
-    - vc é humano?
-    - quem é vc?
-
+  - intent: goodbye
+    examples: |
+      - tchau
+      - xau
+      - até mais
+      - adeus
+      - fui
+      - obrigado

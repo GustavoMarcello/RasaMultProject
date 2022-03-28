@@ -5,9 +5,6 @@ session_config:
 intents:
 - greet
 - goodbye
-- affirm
-- deny
-- bot_challenge
 
 responses:
   utter_greet:
@@ -18,6 +15,9 @@ responses:
     - title: Chatbot 2
       payload: /iniciar_bot2
 
+  utter_goodbye:
+  - text: Até mais
+
   utter_return:
   - text: Teste novamente se quiser 😄
     buttons:
@@ -26,11 +26,6 @@ responses:
     - title: Chatbot 2
       payload: /iniciar_bot2
 
-  utter_goodbye:
-  - text: Até mais
-
-  utter_bot_challenge:
-  - text: Sou um bot Rasa!
   
   utter_fallback:
   - text: Desculpe não entendi, Qual chatbot você deseja testar?

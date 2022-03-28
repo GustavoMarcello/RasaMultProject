@@ -1,0 +1,12 @@
+version: "2.0"
+stories:
+- story: verificar se é bot
+  steps:
+  - intent: bot_challenge
+  - action: utter_bot_challenge
+
+- story: xingamento
+  steps:
+  - intent: xingamento
+  - action: utter_xingamento
+

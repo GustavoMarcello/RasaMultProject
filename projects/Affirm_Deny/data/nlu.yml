@@ -1,0 +1,55 @@
+version: "2.0"
+
+nlu:
+- intent: affirm
+  examples: |
+    - sim
+    - quero
+    - Quero sim
+    - conseguiu
+    - conseguiu sim
+    - pode
+    - pode sim
+    - s
+    - tenho
+    - claro
+    - ok
+    - positivo
+    - yes
+    - lógico
+    - claro que sim
+    - SIM
+    - otimo
+    - maravilha
+    - que ótimo
+    - simmmmm
+    - aham
+    - ctz
+    - com certeza
+    - é isso
+    - isso
+    - exatamente
+
+- intent: deny
+  examples: |
+    - não
+    - não tenho
+    - n
+    - negativo
+    - never
+    - not
+    - pode não
+    - nao
+    - não mesmo
+    - de jeito nenhum
+    - nop
+    - não não
+    - NAO
+    - jamais
+    - minha dúvida não foi respondida
+    - no
+    - ainda não
+    - não ainda
+    - nunca
+    - acho que não
+    - nem ferrando
